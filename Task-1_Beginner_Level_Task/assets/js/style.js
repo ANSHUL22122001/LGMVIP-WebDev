@@ -5,4 +5,9 @@ $(".owl-carousel").owlCarousel({
     video:true,
     lazyLoad:true,
     center:true
-  });
+});
+AOS.init();
+function videoslider(links){
+  document.querySelector(".slider-s").src = links;
+}
+  
