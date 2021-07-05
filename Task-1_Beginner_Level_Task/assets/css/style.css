@@ -474,12 +474,21 @@
 
 
 /* News */
-.news{
+/* .news{
     background-image: url('https://wowslider.com/sliders/demo-93/data1/images/sunset.jpg');
     background-repeat: no-repeat;
     background-position: center;
     padding: 100px 0px;
     background-size: cover;
+} */
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.news{
+    padding: 100px 0px;
+    
 }
 .news h1{
     color: white;
@@ -508,9 +517,14 @@
     background-color:rgb(88, 54, 88);
     color: white;
 }
+
 @media(max-width:992px){
     .news{
-        padding: 70px 0px;
+        padding: 120px 0px;
+    }
+    .parallax-window {
+        min-height: 400px;
+        background: transparent;
     }
     .news .search{
         margin-top:30px;
@@ -531,7 +545,7 @@
 }
 @media(max-width:768px){
     .news{
-        padding: 50px 0px;
+        padding: 150px 0px;
     }
     .news .search{
         margin-top:20px;
@@ -553,20 +567,20 @@
         font-size: 25px;
     }
     .news{
-        padding: 50px 0px;
+        padding: 150px 0px;
     }
     .news .search{
         margin-top:20px;
     }
     .news .search input{
-        width: 175px;
-        height: 30px;
+        width: 200px;
+        height: 40px;
         font-size: 14px;
     }
     .news .search button{
-        width: 100px;
+        width: 70px;
         padding: 2px 2px;
-        height: 30px;
+        height: 40px;
         font-size: 14px;
     }
 }
