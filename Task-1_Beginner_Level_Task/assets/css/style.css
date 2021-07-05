@@ -246,13 +246,14 @@
     color: black;
     margin: 0px auto;
     border-radius: 2px;
-    /* padding: 10px; */
     font-size: 12px;
 }
 .project .project-description p{
     color: grey;
 }
-
+.des:hover{
+    transform: translateY(-15px);
+}
 .des:hover button{
     background-color:rgb(88, 54, 88);
     color:white;
@@ -260,7 +261,17 @@
 .des:hover .project-description{
     background-color:rgb(255, 221, 109);
 }
-
+@media(max-width:400px){
+    .project .des{
+        height: 95vh;
+    }
+    .project img{   
+        height:60vh;  
+    }
+    .project .project-description{
+        height: 35vh;
+    }
+}
 
 
 
