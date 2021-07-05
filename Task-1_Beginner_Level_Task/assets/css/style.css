@@ -260,7 +260,17 @@
 .des:hover .project-description{
     background-color:rgb(255, 221, 109);
 }
-
+@media(max-width:400px){
+    .project .des{
+        height: 95vh;
+    }
+    .project img{   
+        height:60vh;  
+    }
+    .project .project-description{
+        height: 35vh;
+    }
+}
 
 
 
