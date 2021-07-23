@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background: #fff;
+    background-color: #bbb;
+}
+
+.wrapper .header{
+    z-index: 1;
+    background: black;
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+    top: 0;
+    border-bottom: 1px solid #bbb;
+}
+
+.wrapper .header .header-menu{
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.wrapper .header .header-menu .title{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    flex: 1;
+    text-align: center;
+}
+
+.wrapper .header .header-menu .title span{
+    color: #4CCEE8;
+}
+
+.wrapper .header .header-menu .sidebar-btn{
+    color: #fff;
+    /* position: absolute; */
+    /* margin-left: 10px; */
+    border: 1px solid white;
+    padding: 5px 10px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 1s;
+    transition-property:all;
+}
+
+.wrapper .header .header-menu .sidebar-btn:hover{
+    background-color: #4CCEE8;
+}
+
+.wrapper .header .header-menu ul{
+    display: flex;
+}
+
+.wrapper .header .header-menu ul li a{
+    background: #fff;
+    color: #000;
+    display: block;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property: background, color;
+}
+
+.wrapper .header .header-menu ul li a:hover{
+    background: #4CCEE8;
+    color: #fff;
+}
+
+.wrapper .sidebar{
+    z-index: 1;
+    background: black;
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+    border-right: 1px solid #bbb;
+}
+
+.wrapper .sidebar .sidebar-menu{
+    overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .profile img{
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .profile p{
+    color: #bbb;
+    font-weight: 700;
+}
+.wrapper .sidebar .sidebar-menu .profile span{
+    color:#3498DB;
+    font-weight: 700;
+    font-size:12px;
+    margin-bottom: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn{
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 25px 20px;
+    transition: 0.3s;
+    transition-property: color;
+}
+.wrapper .sidebar .sidebar-menu .item:hover .menu-btn{
+    background-color: #bbb;
+    color: black;
+}
+.wrapper .sidebar .sidebar-menu .active{
+    background-color: #bbb;
+    color: black;
+}
+/*             
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+    color: #4CCEE8;
+} */
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+    margin-right: 20px;
+}
+
+/* .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+} */
+
+/* .wrapper .sidebar .sidebar-menu .item .sub-menu{
+    background: #3498DB;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    transition-property: background, max-height;
+} */
+/*             
+.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+    display: block;
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    transition-property: background;
+} */
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+    background: #55B1F0;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child){
+    border-bottom: 1px solid #8FC5E9;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+    padding-right: 20px;
+    font-size: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+    max-height: 500px;
+}
+
+.wrapper .main-container{
+    width: (100% - 250px);
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 15px;
+    background: url(background.jpg)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+.wrapper.collapse .sidebar{
+    width: 70px;
+}
+
+.wrapper.collapse .sidebar .profile img,
+.wrapper.collapse .sidebar .profile span,
+.wrapper.collapse .sidebar .profile p,
+.wrapper.collapse .sidebar a span{
+    display: none;
+}
+
+.wrapper.collapse .sidebar .sidebar-menu .item .menu-btn{
+    font-size: 23px;
+}
+
+.wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i{
+    font-size: 18px;
+    padding-left: 3px;
+}
+
+.wrapper.collapse .main-container{
+    width: calc(100% - 70px);
+    margin-left: 70px;
+}
+
+.wrapper .main-container .card{
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .main-container .card .card-content{
+    margin-bottom: 50px;
+    height: 100px;
+    background-color: black;
+    border-radius: 5px;
+}
+.wrapper .main-container .card .card-content .card-text{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 30px;
+}
+.wrapper .main-container .card .card-content .card-text .card-title{
+    font-size: 20px;       
+}
+.wrapper .main-container .card .card-content .card-text .card-title h3{   
+    font-size: 20px;   
+    color: #3498DB; 
+    font-weight: 800;   
+}
+.wrapper .main-container .card .card-content .card-text .card-title p{
+    margin: 5px 10px;  
+    font-weight: 800;      
+}
+.wrapper .main-container .card .card-content .card-text .card-icon{
+    font-size: 60px;
+}
